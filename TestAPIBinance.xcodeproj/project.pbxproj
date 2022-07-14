@@ -7,18 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AB9D839C62E3BF44E4CA3408 /* Pods_TestAPIBinance.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EF10C279E3E6F5E66F7AE3C /* Pods_TestAPIBinance.framework */; };
 		B3E3DA40288042A200EA002C /* TestAPIBinanceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E3DA3F288042A200EA002C /* TestAPIBinanceApp.swift */; };
 		B3E3DA42288042A200EA002C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E3DA41288042A200EA002C /* ContentView.swift */; };
 		B3E3DA44288042A300EA002C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3E3DA43288042A300EA002C /* Assets.xcassets */; };
 		B3E3DA47288042A300EA002C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3E3DA46288042A300EA002C /* Preview Assets.xcassets */; };
+		B3E3DA4F2880915300EA002C /* Binancesdk.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E3DA4E2880915300EA002C /* Binancesdk.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4EF10C279E3E6F5E66F7AE3C /* Pods_TestAPIBinance.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestAPIBinance.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		697D41F549B00CABCE0B9833 /* Pods-TestAPIBinance.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestAPIBinance.release.xcconfig"; path = "Target Support Files/Pods-TestAPIBinance/Pods-TestAPIBinance.release.xcconfig"; sourceTree = "<group>"; };
 		B3E3DA3C288042A200EA002C /* TestAPIBinance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestAPIBinance.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3E3DA3F288042A200EA002C /* TestAPIBinanceApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestAPIBinanceApp.swift; sourceTree = "<group>"; };
 		B3E3DA41288042A200EA002C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B3E3DA43288042A300EA002C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B3E3DA46288042A300EA002C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B3E3DA4E2880915300EA002C /* Binancesdk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Binancesdk.swift; sourceTree = "<group>"; };
+		C97D32720DCFF556F4D9E34A /* Pods-TestAPIBinance.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestAPIBinance.debug.xcconfig"; path = "Target Support Files/Pods-TestAPIBinance/Pods-TestAPIBinance.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,17 +32,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB9D839C62E3BF44E4CA3408 /* Pods_TestAPIBinance.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A9BB360CC1490ADFA092095D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C97D32720DCFF556F4D9E34A /* Pods-TestAPIBinance.debug.xcconfig */,
+				697D41F549B00CABCE0B9833 /* Pods-TestAPIBinance.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		B3E3DA33288042A200EA002C = {
 			isa = PBXGroup;
 			children = (
 				B3E3DA3E288042A200EA002C /* TestAPIBinance */,
 				B3E3DA3D288042A200EA002C /* Products */,
+				A9BB360CC1490ADFA092095D /* Pods */,
+				DC7FF1E1982763662E9BFCD3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -53,6 +71,7 @@
 			children = (
 				B3E3DA3F288042A200EA002C /* TestAPIBinanceApp.swift */,
 				B3E3DA41288042A200EA002C /* ContentView.swift */,
+				B3E3DA4E2880915300EA002C /* Binancesdk.swift */,
 				B3E3DA43288042A300EA002C /* Assets.xcassets */,
 				B3E3DA45288042A300EA002C /* Preview Content */,
 			);
@@ -67,6 +86,14 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		DC7FF1E1982763662E9BFCD3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4EF10C279E3E6F5E66F7AE3C /* Pods_TestAPIBinance.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +101,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B3E3DA4A288042A300EA002C /* Build configuration list for PBXNativeTarget "TestAPIBinance" */;
 			buildPhases = (
+				6D180D6D51124A9DA3FF3F82 /* [CP] Check Pods Manifest.lock */,
 				B3E3DA38288042A200EA002C /* Sources */,
 				B3E3DA39288042A200EA002C /* Frameworks */,
 				B3E3DA3A288042A200EA002C /* Resources */,
+				5EB42EB9C721EB2DE2C71F27 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -111,6 +140,9 @@
 				Base,
 			);
 			mainGroup = B3E3DA33288042A200EA002C;
+			packageReferences = (
+				B3E3DA4D288056DE00EA002C /* XCRemoteSwiftPackageReference "SwiftBinanceChain" */,
+			);
 			productRefGroup = B3E3DA3D288042A200EA002C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -132,11 +164,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5EB42EB9C721EB2DE2C71F27 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TestAPIBinance/Pods-TestAPIBinance-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TestAPIBinance/Pods-TestAPIBinance-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TestAPIBinance/Pods-TestAPIBinance-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6D180D6D51124A9DA3FF3F82 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TestAPIBinance-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B3E3DA38288042A200EA002C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3E3DA4F2880915300EA002C /* Binancesdk.swift in Sources */,
 				B3E3DA42288042A200EA002C /* ContentView.swift in Sources */,
 				B3E3DA40288042A200EA002C /* TestAPIBinanceApp.swift in Sources */,
 			);
@@ -261,6 +336,7 @@
 		};
 		B3E3DA4B288042A300EA002C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C97D32720DCFF556F4D9E34A /* Pods-TestAPIBinance.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -289,6 +365,7 @@
 		};
 		B3E3DA4C288042A300EA002C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 697D41F549B00CABCE0B9833 /* Pods-TestAPIBinance.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -337,6 +414,17 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B3E3DA4D288056DE00EA002C /* XCRemoteSwiftPackageReference "SwiftBinanceChain" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/iamhyw/SwiftBinanceChain.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
 	};
 	rootObject = B3E3DA34288042A200EA002C /* Project object */;
 }

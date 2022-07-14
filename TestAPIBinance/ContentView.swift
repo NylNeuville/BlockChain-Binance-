@@ -6,14 +6,27 @@
 //
 
 import SwiftUI
+import BinanceChain
 
 struct ContentView: View {
+    let binance = BinanceChain()
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            Button(action: {
+                getLatestBlockTime()
+                print("un string")
+            }, label: {
+                Label("know latest block time", systemImage: "bitcoinsign.circle").font(.title)
+                
+            })
+            .buttonStyle(.bordered)
+            .tint(.purple)
+        }
+    }
+    func getLatestBlockTime() {
+        binance.time() { (response) in
+            if let error = response.error { return print(error) }
+            print(response.time)
         }
     }
 }
