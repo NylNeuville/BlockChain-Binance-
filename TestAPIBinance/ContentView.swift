@@ -10,23 +10,38 @@ import BinanceChain
 
 struct ContentView: View {
     let binance = BinanceChain()
+    @State private var isPressed = false
+    var tokenList: [[String]] = [[]]
     var body: some View {
-        VStack {
-            Button(action: {
-                getLatestBlockTime()
-                print("un string")
-            }, label: {
-                Label("know latest block time", systemImage: "bitcoinsign.circle").font(.title)
+        ScrollView {
+            VStack {
+                Text(isPressed ? "vrai" : "false")
+//                Text(isPressed ? )
                 
-            })
-            .buttonStyle(.bordered)
-            .tint(.purple)
+                Button(action: {
+                    isPressed = true
+                    getLatestBlockTime()
+                    getTokenList()
+                    print("un string")
+                }, label: {
+                    Label("know latest block time", systemImage: "bitcoinsign.circle").font(.title)
+                    
+                })
+                .buttonStyle(.bordered)
+                .tint(.purple)
+            }
         }
     }
     func getLatestBlockTime() {
         binance.time() { (response) in
             if let error = response.error { return print(error) }
             print(response.time)
+        }
+    }
+    
+    func getTokenList() {
+        binance.tokens(limit: .fiveHundred, offset: 0) { (response) in
+            print(response.tokens)
         }
     }
 }

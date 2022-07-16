@@ -11,7 +11,6 @@
 		B3E3DA40288042A200EA002C /* TestAPIBinanceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E3DA3F288042A200EA002C /* TestAPIBinanceApp.swift */; };
 		B3E3DA42288042A200EA002C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E3DA41288042A200EA002C /* ContentView.swift */; };
 		B3E3DA44288042A300EA002C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3E3DA43288042A300EA002C /* Assets.xcassets */; };
-		B3E3DA47288042A300EA002C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3E3DA46288042A300EA002C /* Preview Assets.xcassets */; };
 		B3E3DA4F2880915300EA002C /* Binancesdk.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E3DA4E2880915300EA002C /* Binancesdk.swift */; };
 /* End PBXBuildFile section */
 
@@ -24,6 +23,10 @@
 		B3E3DA43288042A300EA002C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B3E3DA46288042A300EA002C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B3E3DA4E2880915300EA002C /* Binancesdk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Binancesdk.swift; sourceTree = "<group>"; };
+		B3E3DA512881CA4500EA002C /* BinanceApi.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = BinanceApi.xcframework; path = Carthage/Build/BinanceApi.xcframework; sourceTree = "<group>"; };
+		B3E3DA562881CC2200EA002C /* Alamofire.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Alamofire.xcframework; path = Carthage/Build/Alamofire.xcframework; sourceTree = "<group>"; };
+		B3E3DA592881CEE200EA002C /* BinanceApi.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BinanceApi.framework; path = "Carthage/Build/BinanceApi.xcframework/macos-arm64_x86_64/BinanceApi.framework"; sourceTree = "<group>"; };
+		B3E3DA5E2881D04E00EA002C /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "Carthage/Build/Alamofire.xcframework/macos-arm64_x86_64/Alamofire.framework"; sourceTree = "<group>"; };
 		C97D32720DCFF556F4D9E34A /* Pods-TestAPIBinance.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestAPIBinance.debug.xcconfig"; path = "Target Support Files/Pods-TestAPIBinance/Pods-TestAPIBinance.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -89,6 +92,10 @@
 		DC7FF1E1982763662E9BFCD3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B3E3DA5E2881D04E00EA002C /* Alamofire.framework */,
+				B3E3DA592881CEE200EA002C /* BinanceApi.framework */,
+				B3E3DA562881CC2200EA002C /* Alamofire.xcframework */,
+				B3E3DA512881CA4500EA002C /* BinanceApi.xcframework */,
 				4EF10C279E3E6F5E66F7AE3C /* Pods_TestAPIBinance.framework */,
 			);
 			name = Frameworks;
@@ -142,6 +149,7 @@
 			mainGroup = B3E3DA33288042A200EA002C;
 			packageReferences = (
 				B3E3DA4D288056DE00EA002C /* XCRemoteSwiftPackageReference "SwiftBinanceChain" */,
+				B3E3DA502881C69300EA002C /* XCRemoteSwiftPackageReference "BinanceApi" */,
 			);
 			productRefGroup = B3E3DA3D288042A200EA002C /* Products */;
 			projectDirPath = "";
@@ -157,7 +165,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B3E3DA47288042A300EA002C /* Preview Assets.xcassets in Resources */,
 				B3E3DA44288042A300EA002C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -344,6 +351,11 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"TestAPIBinance/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/BinanceApi.xcframework/macos-arm64_x86_64",
+					"$(PROJECT_DIR)/Carthage/Build/Alamofire.xcframework/macos-arm64_x86_64",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -373,6 +385,11 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"TestAPIBinance/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/BinanceApi.xcframework/macos-arm64_x86_64",
+					"$(PROJECT_DIR)/Carthage/Build/Alamofire.xcframework/macos-arm64_x86_64",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -422,6 +439,14 @@
 			requirement = {
 				branch = master;
 				kind = branch;
+			};
+		};
+		B3E3DA502881C69300EA002C /* XCRemoteSwiftPackageReference "BinanceApi" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/dpyro/BinanceApi.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */

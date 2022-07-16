@@ -8,13 +8,6 @@
 import Foundation
 import BinanceChain
 
+
 let binance = BinanceChain()
-
-//func getLatestBlockTime() {
-//    binance.time() { (response) in
-//        if let error = response.error { return print(error) }
-//        print(response.time)
-//    }
-//}
-
 
